@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -5,10 +6,15 @@ spring:
     username: root
     password: 45628852
   jpa:
+    # 数据库类型
     database: mysql
+    # 输出日志
     show-sql: true
     properties:
       hibernate:
+        # JPA配置
         hbm2ddl.auto: update
+server:
+  port: 8880
 
 

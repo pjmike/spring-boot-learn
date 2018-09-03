@@ -3,22 +3,26 @@ package com.pjmike.jpa.dao;
 import com.pjmike.jpa.entity.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PersonRepositoryTest {
+    private static final Logger logger = LoggerFactory.getLogger(PersonRepositoryTest.class);
     @Autowired
     private PersonRepository personRepository;
     @Test
-    public void save() {
+    public void testPerson() {
         Person person = new Person();
-        person.setContent("hello world");
+        person.setUsername("pjmike");
         person = personRepository.save(person);
-        System.out.println("Person id: "+person.getId()+", Person content: "+person.getContent());
+        logger.info("添加成员: {}",person);
+        Person user = personRepository.findByUsername("pjmike");
+        logger.info("条件查询: {}",user);
     }
 }

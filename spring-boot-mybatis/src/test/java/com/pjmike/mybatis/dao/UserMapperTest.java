@@ -26,9 +26,9 @@ public class UserMapperTest {
         logger.info("查询插入的用户信息: {}",userMapper.selectOne(user));
 
         //模拟分页
-        for (int i = 0; i < 20; i++) {
-            userMapper.insertSelective(new User("pjmike" + i, "123456" + i));
-        }
+//        for (int i = 0; i < 20; i++) {
+//            userMapper.insertSelective(new User("pjmike" + i, "123456" + i));
+//        }
         PageInfo<User> pageInfo = PageHelper.startPage(1, 10).setOrderBy("id desc").doSelectPageInfo(() -> this.userMapper.selectAll());
         logger.info("[lambda写法]-[分页信息]-[{}]", pageInfo.toString());
 

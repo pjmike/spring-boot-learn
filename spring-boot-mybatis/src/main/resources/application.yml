@@ -22,15 +22,31 @@ pagehelper:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://39.106.63.214:3306/demo?useUnicode=true&characterEncoding=utf8
     username: root
-    password: root
+    password: 45628852
 server:
   port: 8890
 logging:
   level:
     org.mybatis: debug
     com.pjmike.mybatis.dao: debug
+management:
+  endpoint:
+    health:
+      show-details: always
+    beans:
+      enabled: true
+    mappings:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+info:
+  blog-url: https://pjmike.github.io
+  author: pjmike
+  version: 1.0
 #  file: my.log
 
 

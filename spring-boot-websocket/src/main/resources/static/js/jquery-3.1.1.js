@@ -8759,7 +8759,7 @@
              timeout: 0,
              data: null,
              dataType: null,
-             username: null,
+             name: null,
              password: null,
              cache: null,
              throws: false,

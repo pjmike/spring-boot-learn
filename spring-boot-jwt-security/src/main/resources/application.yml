@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.106.63.214:3306/jwt?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 45628852
+  jpa:
+    # 数据库类型
+    database: mysql
+    # 输出日志
+    show-sql: true
+    properties:
+      hibernate:
+        # JPA配置
+        hbm2ddl.auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+jwt:
+  secret: mySecret
+  expiration: 64000
+  header: Authorization
+server:
+  port: 8888
+logging:
+  level:
+    org.springframework.security: debug

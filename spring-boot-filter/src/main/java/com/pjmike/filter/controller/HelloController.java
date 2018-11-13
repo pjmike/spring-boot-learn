@@ -22,9 +22,9 @@ public class HelloController {
 
     @PostMapping("/hello")
     public Map<String, String> hello(@RequestBody Map<String, String> map) {
-        String username = map.get("username");
+        String username = map.get("name");
         String password = map.get("password");
-        logger.info("username:{},password:{}", username, password);
+        logger.info("name:{},password:{}", username, password);
         return map;
     }
 }

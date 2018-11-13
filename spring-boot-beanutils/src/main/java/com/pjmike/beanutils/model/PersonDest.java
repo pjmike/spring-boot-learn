@@ -37,7 +37,7 @@ public class PersonDest {
     public String toString() {
         return "PersonDest{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", name='" + username + '\'' +
                 ", age=" + age +
                 '}';
     }

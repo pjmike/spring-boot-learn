@@ -34,7 +34,7 @@ public class User {
     }
 
     /**
-     * @return username
+     * @return name
      */
     public String getUsername() {
         return username;
@@ -65,7 +65,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", name='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

@@ -32,7 +32,7 @@ public class UserControllerTest4 {
     @Test
     @Transactional
     public void userMapping() throws Exception {
-        String content = "{\"username\":\"pj_234123\",\"password\":\"123456\"}";
+        String content = "{\"name\":\"pj_234123\",\"password\":\"123456\"}";
         mockMvc.perform(request(HttpMethod.POST, "/user")
                         .contentType("application/json").content(content))
                 .andExpect(status().isOk())

@@ -19,7 +19,7 @@ public class UserControllerTest {
     private MockMvc mockMvc;
     @Test
     public void userMapping() throws Exception {
-        String content = "{\"username\":\"pj_mike\",\"password\":\"123456\"}";
+        String content = "{\"name\":\"pj_mike\",\"password\":\"123456\"}";
         mockMvc.perform(request(HttpMethod.POST, "/user")
                         .contentType("application/json").content(content))
                 .andExpect(status().isOk())

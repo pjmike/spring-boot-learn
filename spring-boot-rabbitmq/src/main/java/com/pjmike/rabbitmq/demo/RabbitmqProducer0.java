@@ -58,7 +58,7 @@ public class RabbitmqProducer0 {
             System.err.println("body :" + new String(body));
         });
         try {
-            Thread.sleep(3000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

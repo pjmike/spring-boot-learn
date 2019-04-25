@@ -4,7 +4,7 @@ package com.pjmike.limiter;
  * 限流类型
  *
  * @author pjmike
- * @create 2018-09-14 16:17
+ * @create 2019-04-23 16:20
  */
 public enum  LimitType {
     /**

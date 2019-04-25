@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
  * 拦截器
  *
  * @author pjmike
- * @create 2018-09-14 16:25
+ * @create 2019-04-23 16:20
  */
 @Aspect
 @Configuration
@@ -58,7 +58,10 @@ public class LimiterInterceptor {
             String luaScript = buildLuaScript();
             RedisScript<Number> redisScript = new DefaultRedisScript<>(luaScript);
 
+        } catch (Exception e) {
+
         }
+        return null;
     }
 
     private String buildLuaScript() {
@@ -80,5 +83,6 @@ public class LimiterInterceptor {
     }
 
     private String getIpAddress() {
+        return null;
     }
 }

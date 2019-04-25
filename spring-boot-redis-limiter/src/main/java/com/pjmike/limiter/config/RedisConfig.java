@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  * @author pjmike
- * @create 2018-09-14 16:20
+ * @create 2019-04-23 16:20
  */
 @Configuration
 public class RedisConfig {
